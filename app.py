@@ -10,14 +10,14 @@ app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', 'clave_super_secreta_12345')
 
 # Configuración MongoDB
-MONGO_URI = os.getenv('MONGO_URI')
-MONGO_DB = os.getenv('MONGO_DB')
+MONGO_URI = os.getenv('MONGO_URI', '')
+MONGO_DB = os.getenv('MONGO_DB', '')
 MONGO_COLECCION = os.getenv('MONGO_COLECCION', 'usuario_roles')
 
 
 # Configuración ElasticSearch Cloud
-ELASTIC_CLOUD_URL = os.getenv('ELASTIC_CLOUD_URL')
-ELASTIC_API_KEY = os.getenv('ELASTIC_API_KEY')
+ELASTIC_CLOUD_URL = os.getenv('ELASTIC_CLOUD_URL', '')
+ELASTIC_API_KEY = os.getenv('ELASTIC_API_KEY', '')
 
 # Versión de la aplicación
 VERSION_APP = "1.0.0"
